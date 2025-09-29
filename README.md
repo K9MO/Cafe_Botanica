@@ -67,5 +67,7 @@ Here’s a Harvard-style reference list for the sources you provided, Olona. Sin
 6. [Unknown Author]. (2025). *Image hosted on Google Share* [online]. Available at: https://share.google/images/Y8S0fqxWitng8WYZR [Accessed 27 Aug. 2025].
 7. [Unknown Author]. (2025). *Image hosted on Google Share* [online]. Available at: https://share.google/images/kQsSSwshLADpSGwve [Accessed 27 Aug. 2025].
 8. 8. [Unknown Author]. (2025). *Image hosted on Google Share* [online]. Available at: https://share.google/images/qrmzsLYVQWxmH07mI [Accessed 27 Aug. 2025].
-
-
+updated website and goals 
+changed the webpages and added more information 
+updated timeline and milestones 
+sitemap added

@@ -1,0 +1,98 @@
+/* ================= GLOBAL RESET ================= */
+/* Removes default browser padding/margin and ensures consistent box-sizing */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* ================= BODY STYLING ================= */
+body {
+    font-family: Arial, Helvetica, sans-serif; /* Clean, readable font */
+    font-size: 16px; /* Base font size */
+    line-height: 1.5; /* Better readability */
+    letter-spacing: 0.5px; /* Small spacing for text clarity */
+    background-color: rgb(217, 245, 236); /* Light aqua background */
+    color: #333; /* Dark gray text */
+}
+
+/* ================= HEADINGS ================= */
+h1, h2, h3 {
+    font-weight: bold;
+    margin-bottom: 1rem; /* Space below headings */
+}
+
+/* ================= PARAGRAPHS ================= */
+p {
+    margin-bottom: 1rem; /* Adds space between paragraphs */
+}
+
+/* ================= FLEX CONTAINER ================= */
+/* Used for layout of content boxes */
+#container {
+    display: flex; /* Flexbox for layout */
+    flex-wrap: wrap; /* Wraps items onto multiple lines if needed */
+    justify-content: center; /* Center horizontally */
+    align-items: flex-start; /* Align boxes at the top */
+    gap: 15px; /* Space between boxes */
+    max-width: 900px; /* Keeps layout centered */
+    background-color: rgb(240, 240, 240); /* Light gray container */
+    margin-left: auto; /* Center horizontally */
+    margin-right: auto;
+    padding: 20px;
+    border-radius: 15px; /* Rounded corners */
+}
+
+/* ================= BOXES (DEFAULT STYLE) ================= */
+div {
+    width: 150px;
+    height: 150px;
+    background-color: rgb(222, 184, 135); /* Default beige background */
+    border: solid 2px black;
+    border-radius: 20px;
+    padding: 1.5rem;
+    margin: 1rem;
+    font-size: 1rem;
+    box-shadow: 2px 2px 8px rgba(0,0,0,0.2); /* Subtle shadow */
+    transition: transform 0.3s ease, background-color 0.3s ease; /* Hover effects */
+}
+
+/* ================= HOVER EFFECT ================= */
+div:hover {
+    background-color: rgb(200, 160, 110); /* Darker beige on hover */
+    transform: scale(1.05); /* Slight zoom effect */
+}
+
+/* ================= INDIVIDUAL BOXES ================= */
+#box1 {
+    background-color: rgb(93, 200, 233); /* Light blue background */
+    height: 400px; /* Taller box */
+    flex: 1 1 200px; /* Flexible width with min size */
+}
+
+#box2, #box3 {
+    flex: 1 1 150px; /* Flexible smaller boxes */
+}
+
+/* ================= RESPONSIVE DESIGN ================= */
+@media (max-width: 768px) {
+    body {
+        font-size: 15px; /* Slightly smaller text */
+    }
+    #container {
+        flex-direction: column; /* Stacks boxes vertically */
+        align-items: center;
+    }
+    div {
+        width: 100%; /* Full width for smaller screens */
+        max-width: 300px; /* Prevents boxes from being too wide */
+        height: auto; /* Auto height to fit content */
+    }
+}
+
+/* ================= IMAGE STYLING ================= */
+img {
+    max-width: 100%; /* Ensures images don’t overflow */
+    height: auto; /* Keeps aspect ratio */
+    border-radius: 10px; /* Rounded corners for images */
+}

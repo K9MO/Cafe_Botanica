@@ -2,32 +2,87 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <!-- Makes the website responsive on mobile devices -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Homepage</title>
+    
+    <title>Homepage - Cafe Botanika</title>
+    
+    <!-- External stylesheet -->
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
+    <!-- ================= HEADER SECTION ================= -->
     <header>        
-        <h1>Homepage</h1>
-        <img src="_images/Cafe_Botanika_Logo_nbg.png.png" alt="Cafe_Botanika_Logo_nbg">
-        <p>Cafe Botanika is based in Stellenbosch, Cape Town</p>
+        <!-- Main heading -->
+        <h1>Cafe Botanika</h1>
+        
+        <!-- Website logo -->
+        <img src="_images/Cafe_Botanika_Logo_nbg.png.png" alt="Cafe Botanika Logo" width="150">
+        
+        <!-- Short introduction text -->
+        <p>Welcome to Cafe Botanika, your cozy retreat in Stellenbosch, Cape Town.</p>
     </header>
 
-    <main>
-
-    </main>
-    
-    <footer>
-        
-    </footer>
+    <!-- ================= NAVIGATION MENU ================= -->
     <nav>
         <ul>
-            <li>Home</li>
+            <li>Home</li> <!-- Current page (no link needed) -->
             <li><a href="about us.html">About</a></li>
             <li><a href="gallery.html">Gallery</a></li>
-            <li><a href="product and services.html">Products and Services</a></li>
+            <li><a href="product and services.html">Products & Services</a></li>
             <li><a href="contact us.html">Contact Us</a></li>
         </ul>
     </nav>
+
+    <!-- ================= MAIN CONTENT ================= -->
+    <main>
+        <!-- Hero section -->
+        <section id="hero">
+            <h2>Your Daily Dose of Nature and Coffee</h2>
+            <p>Relax in our serene garden setting while enjoying freshly brewed coffee and delicious treats.</p>
+        </section>
+
+        <!-- About section -->
+        <section id="about">
+            <h2>About Us</h2>
+            <p>Cafe Botanika has been serving the Stellenbosch community with love and passion for over 10 years. Our mission is to create a calm, natural space where people can enjoy exceptional food and beverages.</p>
+        </section>
+
+        <!-- Services section -->
+        <section id="services">
+            <h2>Our Offerings</h2>
+            <ul>
+                <li>Organic Coffee & Teas</li>
+                <li>Freshly Baked Pastries</li>
+                <li>Plant-Based Meals</li>
+                <li>Private Events & Catering</li>
+            </ul>
+        </section>
+
+        <!-- Featured gallery section -->
+        <section id="featured-gallery">
+            <h2>Gallery Preview</h2>
+            <p>Take a sneak peek at our cozy interiors and lush garden.</p>
+            <img src="_images/gallery1.jpg" alt="Cafe Interior" width="250">
+            <img src="_images/gallery2.jpg" alt="Cafe Garden" width="250">
+        </section>
+
+        <!-- Contact call-to-action -->
+        <section id="contact-cta">
+            <h2>Get in Touch</h2>
+            <p>Have questions or want to book a table? <a href="contact us.html">Contact us today!</a></p>
+        </section>
+    </main>
+    
+    <!-- ================= FOOTER SECTION ================= -->
+    <footer>
+        <p>&copy; 2025 Cafe Botanika. All rights reserved.</p>
+        <p>Follow us on 
+            <a href="#">Instagram</a> | 
+            <a href="#">Facebook</a>
+        </p>
+    </footer>
+
 </body>
 </html>
