@@ -3,18 +3,104 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Contact Us Page</title>
+    <title>Contact Us | Cafe Botanika</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            background-color: #f8f8f8;
+            color: #333;
+        }
+
+        header {
+            background-color: #4b7f52;
+            color: white;
+            padding: 10px 20px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        header img {
+            height: 60px;
+        }
+
+        nav ul {
+            list-style: none;
+            display: flex;
+            gap: 15px;
+            padding: 0;
+            margin: 0;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        nav a:hover {
+            text-decoration: underline;
+        }
+
+        main {
+            padding: 20px;
+            background-color: white;
+            margin: 20px;
+            border-radius: 8px;
+        }
+
+        h1 {
+            color: #4b7f52;
+        }
+
+        table {
+            border-spacing: 10px;
+        }
+
+        input, textarea, select {
+            padding: 5px;
+            width: 250px;
+        }
+
+        input[type="submit"], input[type="reset"] {
+            background-color: #4b7f52;
+            color: white;
+            border: none;
+            padding: 8px 15px;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        input[type="submit"]:hover, input[type="reset"]:hover {
+            background-color: #36613d;
+        }
+
+        footer {
+            background-color: #4b7f52;
+            color: white;
+            text-align: center;
+            padding: 10px;
+        }
+
+        iframe {
+            width: 100%;
+            height: 400px;
+            border: 0;
+            margin-top: 20px;
+        }
+    </style>
 </head>
 <body>
 
     <header>
-        <img src="_images/Cafe_Botanika_Logo_nbg.png.png" alt="Cafe_Botanika_Logo_nbg">
+        <img src="_images/Cafe_Botanika_Logo_nbg.png.png" alt="Cafe Botanika Logo">
         <nav>
             <ul>
                 <li><a href="index.html">Home</a></li>
                 <li><a href="about us.html">About</a></li>
                 <li><a href="gallery.html">Gallery</a></li>
-                <li><a href="product and services.html">Products and Services</a></li>
+                <li><a href="product and services.html">Products & Services</a></li>
                 <li>Contact Us</li>
             </ul>
         </nav>
@@ -22,35 +108,100 @@
 
     <main>
         <h1>Contact Us</h1>
-        <p><strong>Physical Address:</strong>  Stellenbosch Botanical Gardens Neethling and, Van Riebeeck St, Stellenbosch, Cape Town, 7602, South Africa</p>
-        <p><strong>Phone:</strong>  +27 72 731 6476</p>  
-        
+        <p><strong>Physical Address:</strong> Stellenbosch Botanical Gardens, Neethling and Van Riebeeck St, Stellenbosch, Cape Town, 7602, South Africa</p>
+        <p><strong>Phone:</strong> +27 72 731 6476</p>  
+
         <h1>Operating Hours</h1>
-        <p><strong>Mondays</strong>: 9am - 4pm</p>
-        <p><strong>Tuesdays</strong>: 9am - 4pm</p>
-        <p><strong>Wednesdays</strong>: 9am - 4pm</p>
-        <p><strong>Thursdays</strong>: 9am - 4pm</p>
-        <p><strong>Fridays</strong>: 9am - 4pm</p>
-        <p><strong>Saturdays</strong>: 9am - 4pm</p>
-        <p><strong>Sundays</strong>: 9am - 4pm</p>
+        <p><strong>Monday – Sunday:</strong> 9am - 4pm</p>
 
-        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3310.2009486985594!2d18.863157575711536!3d-33.93595937320095!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x1dcdb25cee7a0319%3A0xe087df35862678bc!2sStellenbosch%20University%20Botanical%20Garden!5e0!3m2!1sen!2sza!4v1756305475135!5m2!1sen!2sza" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3310.2009486985594!2d18.863157575711536!3d-33.93595937320095!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x1dcdb25cee7a0319%3A0xe087df35862678bc!2sStellenbosch%20University%20Botanical%20Garden!5e0!3m2!1sen!2sza!4v1756305475135!5m2!1sen!2sza"
+            allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
 
-        
+        <h2>Send Us a Message</h2>
+        <p>Please fill out the form below to get in touch with us:</p>
+
+        <form id="contactForm"
+            action="https://docs.google.com/forms/d/e/1FAIpQLSeIBIFezeiKBU_4CyF-eEQ6aESYgEpMCwV-z1294qn_Fy9pyg/formResponse"
+            method="POST" target="_self">
+
+            <table>
+                <tr>
+                    <td><label for="name">Name:</label></td>
+                    <td><input type="text" id="name" name="entry.1234567890" placeholder="Your name here" required></td>
+                </tr>
+                <tr>
+                    <td><label for="email">Email:</label></td>
+                    <td><input type="email" id="email" name="entry.0987654321" placeholder="Your email here" required></td>
+                </tr>
+                <tr>
+                    <td><label for="message">Message:</label></td>
+                    <td><textarea id="message" name="entry.1111111111" rows="4" cols="50" placeholder="Your message here" required></textarea></td>
+                </tr>
+                <tr>
+                    <td><label for="myProv">Province:</label></td>
+                    <td>
+                        <select id="myProv" name="entry.2005620554">
+                            <option value="Gauteng">Gauteng</option>
+                            <option value="Limpopo">Limpopo</option>
+                            <option value="Mpumalanga">Mpumalanga</option>
+                            <option value="North West">North West</option>
+                            <option value="Free State">Free State</option>
+                            <option value="KwaZulu-Natal">KwaZulu-Natal</option>
+                            <option value="Eastern Cape">Eastern Cape</option>
+                            <option value="Western Cape">Western Cape</option>
+                            <option value="Northern Cape">Northern Cape</option>
+                        </select>
+                    </td>
+                </tr>
+                <tr>
+                    <td><label>Preferred Contact Method:</label></td>
+                    <td>
+                        <input type="radio" id="contactEmail" name="contactMethod" value="Email">
+                        <label for="contactEmail">Email</label>
+                        <input type="radio" id="contactPhone" name="contactMethod" value="Phone">
+                        <label for="contactPhone">Phone</label>
+                    </td>
+                </tr>
+                <tr>
+                    <td><label>Gender:</label></td>
+                    <td>
+                        <input type="checkbox" id="genderMale" name="gender" value="Male">
+                        <label for="genderMale">Male</label>
+                        <input type="checkbox" id="genderFemale" name="gender" value="Female">
+                        <label for="genderFemale">Female</label>
+                        <input type="checkbox" id="genderOther" name="gender" value="Other">
+                        <label for="genderOther">Other</label>
+                    </td>
+                </tr>
+                <tr>
+                    <td colspan="2">
+                        <input type="submit" value="Submit">
+                        <input type="reset" value="Clear">
+                    </td>
+                </tr>
+            </table>
+        </form>
     </main>
 
     <footer>
-
+        <p>&copy; 2025 Cafe Botanika | All Rights Reserved</p>
     </footer>
-    <nav>
-        <ul>
-            <li><a href="index.html">Home</a></li>
-            <li><a href="about us.html">About</a></li>
-            <li><a href="gallery.html">Gallery</a></li>
-            <li><a href="product and services.html">Products and Services</a></li>
-            <li>Contact Us</li>
-        </ul>
-    </nav>
-    
+
+    <script>
+        // JavaScript form validation
+        document.getElementById("contactForm").addEventListener("submit", function(event) {
+            const name = document.getElementById("name").value.trim();
+            const email = document.getElementById("email").value.trim();
+
+            if (name === "" || email === "") {
+                alert("Please fill in your name and email before submitting.");
+                event.preventDefault();
+                return false;
+            }
+
+            alert("Thank you for contacting The Street Kids Care Foundation! We will get back to you shortly.");
+        });
+    </script>
+
 </body>
 </html>

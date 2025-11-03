@@ -2,66 +2,158 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <!-- Ensures the site is responsive on all devices -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    
-    <title>Gallery Page</title>
-    
-    <!-- External stylesheet -->
+    <title>Cafe Botanika | Gallery</title>
     <link rel="stylesheet" href="style.css">
+    <style>
+        main {
+            text-align: center;
+            padding: 20px;
+        }
+
+        main h1 {
+            color: #4b7f52;
+            margin-top: 30px;
+        }
+
+        .gallery-section {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 15px;
+            justify-items: center;
+            margin-top: 20px;
+        }
+
+        .gallery-section img {
+            width: 100%;
+            max-width: 250px;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .gallery-section img:hover {
+            transform: scale(1.05);
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+        }
+
+        .lightbox {
+            display: none;
+            position: fixed;
+            z-index: 999;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.9);
+            justify-content: center;
+            align-items: center;
+        }
+
+        .lightbox img {
+            max-width: 90%;
+            max-height: 80%;
+            border-radius: 8px;
+            box-shadow: 0 4px 15px rgba(255, 255, 255, 0.3);
+        }
+
+        .close-btn {
+            position: absolute;
+            top: 30px;
+            right: 40px;
+            color: white;
+            font-size: 40px;
+            font-weight: bold;
+            cursor: pointer;
+            transition: color 0.3s ease;
+        }
+
+        .close-btn:hover {
+            color: #ff6666;
+        }
+
+        header, footer {
+            text-align: center;
+        }
+
+        footer {
+            margin-top: 30px;
+            padding: 10px;
+            background-color: #4b7f52;
+            color: white;
+        }
+    </style>
 </head>
 <body>
-
-    <!-- ================= HEADER SECTION ================= -->
     <header>
-        <!-- Website logo -->
         <img src="_images/Cafe_Botanika_Logo_nbg.png.png" alt="Cafe Botanika Logo">
-
-        <!-- Top navigation menu -->
         <nav>
             <ul>
                 <li><a href="index.html">Home</a></li>
                 <li><a href="about us.html">About</a></li>
-                <li>Gallery</li> <!-- Current page (no link) -->
+                <li>Gallery</li>
                 <li><a href="product and services.html">Products and Services</a></li>
                 <li><a href="contact us.html">Contact Us</a></li>
             </ul>
         </nav>
     </header>
 
-    <!-- ================= MAIN CONTENT ================= -->
     <main>
-        <!-- Gallery section: Menu images -->
         <h1>Menu</h1>
-        <img src="_images/course_nbg.png.png" alt="Course Menu">
-        <img src="_images/feast_nbg.png.png" alt="Feast Menu">
-        <img src="_images/main_menu_nbg.png.png" alt="Main Menu">
-        <img src="_images/menu_nbg.png.png" alt="Menu">
-        <img src="_images/sandwich_nbg.png.png" alt="Sandwich Menu">
+        <div class="gallery-section">
+            <img src="_images/course_nbg.png.png" alt="Course Menu">
+            <img src="_images/feast_nbg.png.png" alt="Feast Menu">
+            <img src="_images/main_menu_nbg.png.png" alt="Main Menu">
+            <img src="_images/menu_nbg.png.png" alt="Menu">
+            <img src="_images/sandwich_nbg.png.png" alt="Sandwich Menu">
+        </div>
 
-        <!-- Gallery section: Outdoor images -->
         <h1>Outdoors</h1>
-        <img src="_images/garden1_ngb.png.png" alt="Garden 1">
-        <img src="_images/garden2_nbg.png.png" alt="Garden 2">
-        <img src="_images/garden3_nbg.png.png" alt="Garden 3">
+        <div class="gallery-section">
+            <img src="_images/garden1_ngb.png.png" alt="Garden 1">
+            <img src="_images/garden2_nbg.png.png" alt="Garden 2">
+            <img src="_images/garden3_nbg.png.png" alt="Garden 3">
+        </div>
     </main>
 
-    <!-- ================= FOOTER SECTION ================= -->
+    <div id="lightbox" class="lightbox">
+        <span class="close-btn" id="closeLightbox">&times;</span>
+        <img id="lightboxImg" src="" alt="Expanded View">
+    </div>
+
     <footer>
-        <!-- Placeholder footer (can include social media links or contact info) -->
+        <p>&copy; 2025 Cafe Botanika | All Rights Reserved</p>
     </footer>
 
-    <!-- ================= SECONDARY NAVIGATION ================= -->
-    <!-- Repeated nav menu (optional, for footer convenience) -->
-    <nav>
-        <ul>
-            <li><a href="index.html">Home</a></li>
-            <li><a href="about us.html">About</a></li>
-            <li>Gallery</li> <!-- Current page -->
-            <li><a href="product and services.html">Products and Services</a></li>
-            <li><a href="contact us.html">Contact Us</a></li>
-        </ul>
-    </nav>
-    
+    <script>
+        const lightbox = document.getElementById("lightbox");
+        const lightboxImg = document.getElementById("lightboxImg");
+        const closeBtn = document.getElementById("closeLightbox");
+        const galleryImages = document.querySelectorAll(".gallery-section img");
+
+        galleryImages.forEach(img => {
+            img.addEventListener("click", () => {
+                lightbox.style.display = "flex";
+                lightboxImg.src = img.src;
+                lightboxImg.alt = img.alt;
+            });
+        });
+
+        closeBtn.addEventListener("click", () => {
+            lightbox.style.display = "none";
+        });
+
+        lightbox.addEventListener("click", (e) => {
+            if (e.target === lightbox) {
+                lightbox.style.display = "none";
+            }
+        });
+
+        document.addEventListener("keydown", (e) => {
+            if (e.key === "Escape") {
+                lightbox.style.display = "none";
+            }
+        });
+    </script>
 </body>
 </html>

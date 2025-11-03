@@ -71,3 +71,6 @@ updated website and goals
 changed the webpages and added more information 
 updated timeline and milestones 
 sitemap added
+i added a javascript 
+i added a site map
+i added a lightbox to gallery
